@@ -1,0 +1,35 @@
+/* 1. Gather requirements
+ * 2. Describe the application
+ * 3. Identify the main objects
+ * 4. Describe interactions
+ * 5. Create a class diagram
+ */
+import java.util.Scanner;
+
+public class Quiz {
+	public static void main(String[] args) 
+	{
+		//TODO Create a program that takes 4 numbers from the user and tells what the largest and the smallest numbers are.
+		numberSelector();
+	}
+	public static void numberSelector()
+	{
+		//declare
+		Scanner numberOfNums = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
+		
+		int x;
+		
+		System.out.println("Please enter how many numbers you want to enter.");
+		x=numberOfNums.nextInt();
+		
+		System.out.println(x);
+		
+		int[] integers = new int[3];
+		for(int i = 0; i < 3; i++)
+		{
+		    integers[i] = sc.nextInt();
+		}
+		System.out.println(integers[0]);
+	}
+}

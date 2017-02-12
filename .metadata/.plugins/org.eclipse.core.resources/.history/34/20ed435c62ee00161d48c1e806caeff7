@@ -1,0 +1,107 @@
+import java.util.Scanner;
+public class RPS {
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		replayGame();
+}
+private static Object ComputerRPS(int Number) 
+{
+		// TODO Auto-generated method stub
+	int computer = Number;
+	String rpsComputer = "";	
+	switch (computer) 
+	{
+	case 0:
+		  rpsComputer = "scissor";
+		  break;
+	case 1:
+		  rpsComputer = "rock";
+		  break;
+	case 2:
+		  rpsComputer = "paper";
+		  break;
+	}
+	return rpsComputer;
+}	
+private static Object UserGuess(int guess)
+{
+	String rpsGuess = "";
+	  switch (guess) 
+	  {
+	  case 0:
+		  rpsGuess = "scissor";
+		  break;
+	  case 1:
+		  rpsGuess = "rock";
+		  break;
+	  case 2:
+		  rpsGuess = "paper";
+		  break;
+	  default:
+	   System.out.print("Invalid input.");
+	   System.exit(0);
+	  }
+	return rpsGuess;
+}
+private static void gameMaker()
+{
+	//declare variables
+	boolean continueInput = true;
+	int computer = (int) Math.floor(Math.random() * 3); 
+	Scanner userInput = new Scanner(System.in);
+	Object rpsComputer = ComputerRPS(computer);
+	int guess;
+	
+	//check data 
+do{
+	try {		
+		  System.out.print("scissor (0), rock (1), paper (2):");
+		  guess = userInput.nextInt();
+		   //close to prevent leaks
+		  //userInput.close();
+		  continueInput = false;
+		  Object rpsGuess = UserGuess(guess);
+		  System.out.print("The computer is " + rpsComputer + ". You are " + rpsGuess);		  
+		  //check the result of the game
+		  
+		  if (computer == guess) 
+		  {
+		   System.out.print(" too. It is a draw. ");
+		  } 
+		  else if (computer - guess == 1 || computer - guess == -2) 
+		  {
+		   System.out.print(". Computer won. ");
+		  } 
+		  else if (computer - guess == -1 || computer - guess == 2) 
+		  {
+		   System.out.print(". You won. ");
+		  }		  
+		}
+	catch (Exception e)
+		{
+			System.out.println("Try again. (" +  "Incorrect input: an integer is required)");          
+			userInput.nextLine(); // Discard input 
+		}
+}
+while (continueInput == true);
+}
+private static void replayGame()
+{
+	boolean replayBool = true;
+	Scanner scan = new Scanner(System.in);
+	int replay;
+	do
+	{
+	//call the game.
+	gameMaker();
+	
+	
+	System.out.println("Type 0 to play again. Type 1 to quit.");
+    replay = scan.nextInt();
+    System.out.println(replay);
+    //replayBool=false;
+	}
+	while(replay == 0);
+	scan.close();
+}
+}
