@@ -81,7 +81,8 @@ public class Quiz
 	}
 	private static int[] addArray(int j, int[] a, int x)
 	{
-		Scanner sc = new Scanner(System.in);	
+		Scanner sc = new Scanner(System.in);
+		
 		try
 		{
 			for (int i = j ; i < x; i++)
@@ -96,8 +97,6 @@ public class Quiz
 			System.out.println("Please enter a proper number: ");
 			addArray(j, a, x);
 		}
-		
-		sc.close();
-		return a;
+		return a;	
 	}
 }
