@@ -43,9 +43,11 @@ public class Quiz
 		System.out.println("Please enter " + x + " number" + ((x > 1) ? "s" : " "));
 
 		//TODO try/catch this?
-		int i;
-		
-		
+		for (int i = 0; i < x; i++) 
+		{
+			integers[i] = sc.nextInt();
+		}
+
 		System.out.println("The minimum value is: " + getMinValue(integers));
 		System.out.println("The maximum value is: " + getMaxValue(integers));
 		sc.close();
@@ -65,7 +67,6 @@ public class Quiz
 		return minValue;
 	}
 	private static int getMaxValue(int[] integers) 
-	
 	{
 		// get the max value from the array
 		int maxValue = integers[0];
@@ -79,24 +80,5 @@ public class Quiz
 		}
 		return maxValue;
 
-	}
-	private static int[] addArray(int i, int[] a)
-	{
-		Scanner sc = new Scanner(System.in);
-		
-		try
-		{
-			for (i = 0; i < x; i++) 
-			{
-				integers[i] = sc.nextInt();
-			}
-		}
-		
-		catch(Exception e)
-		{
-			addArray(i,a);
-		}
-		return a;
-		
 	}
 }
