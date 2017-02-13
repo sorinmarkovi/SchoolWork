@@ -7,6 +7,7 @@
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 public class Quiz 
 {
 	public static void main(String[] args) 
@@ -19,8 +20,9 @@ public class Quiz
 		// declare
 		Scanner numberOfNums = new Scanner(System.in);
 		Scanner sc = new Scanner(System.in);
-		boolean loopBol = true;
-		int x= 0;
+		boolean loopBol  = true;
+		//boolean loopBol2 = true;
+		int x = 0;
 		
 		System.out.println("Please enter how many numbers you want to enter.");
 		do {
@@ -40,19 +42,20 @@ public class Quiz
 		int integers[] = new int[x];
 
 		System.out.println("Please enter " + x + " number" + ((x > 1) ? "s" : " "));
-		addToArray(0,integers,x);	
+
+		//TODO try/catch this?
+		addArray(0,integers,x);
 		
+			
 		System.out.println("The minimum value is: " + getMinValue(integers));
 		System.out.println("The maximum value is: " + getMaxValue(integers));
 		//System.out.println("\n" + Arrays.sort(integers));
 		
 		Arrays.sort(integers);
 		System.out.println("The sorted int array is:");
-		for (int number : integers) 
-		{
-			System.out.print(" " + number + " ");
-		}
-		
+	   for (int number : integers) {
+	   System.out.print(" " + number + " ");
+	   }
 		sc.close();
 		numberOfNums.close();
 	}
@@ -85,7 +88,7 @@ public class Quiz
 		return maxValue;
 
 	}
-	private static int[] addToArray(int j, int[] a, int x)
+	private static int[] addArray(int j, int[] a, int x)
 	{
 		Scanner sc = new Scanner(System.in);	
 		try
@@ -95,13 +98,19 @@ public class Quiz
 				a[i] = sc.nextInt();
 				j++;
 			}
-		}	
+		}
+		
 		catch(Exception e)
 		{
 			System.out.println("Please enter a proper number: ");
-			addToArray(j, a, x);
-		}	
+			addArray(j, a, x);
+		}
+		
 		sc.close();
 		return a;
+	}
+	public static void sort(int[] a)
+	{
+		
 	}
 }
