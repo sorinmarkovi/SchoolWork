@@ -4,7 +4,6 @@
  * 4. Describe interactions
  * 5. Create a class diagram
  */
-import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -46,16 +45,8 @@ public class Quiz
 		//TODO try/catch this?
 		addArray(0,integers,x);
 		
-			
 		System.out.println("The minimum value is: " + getMinValue(integers));
 		System.out.println("The maximum value is: " + getMaxValue(integers));
-		//System.out.println("\n" + Arrays.sort(integers));
-		
-		Arrays.sort(integers);
-		System.out.println("The sorted int array is:");
-	   for (int number : integers) {
-	   System.out.print(" " + number + " ");
-	   }
 		sc.close();
 		numberOfNums.close();
 	}
@@ -108,9 +99,5 @@ public class Quiz
 		
 		sc.close();
 		return a;
-	}
-	public static void sort(int[] a)
-	{
-		
 	}
 }
