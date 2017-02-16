@@ -1,0 +1,23 @@
+/* 1. Gather requirements
+ * 2. Describe the application
+ * 3. Identify the main objects
+ * 4. Describe interactions
+ * 5. Create a class diagram
+ */
+import java.util.Arrays;
+import java.util.Scanner;
+public class GradeBook 
+{
+	
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		//TODO Get input from user on what grades to enter, then display the average and the letter grade. Stop input after a non-number
+		int[] gradebook = null;
+		
+		System.out.println("Hello user. Please start entering grades to add. \nOnce you are finished, press any non-number to finish");
+		gradebook[0] = sc.nextInt();
+		System.out.println(gradebook[0]);
+	}
+
+}
