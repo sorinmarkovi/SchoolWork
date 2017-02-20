@@ -13,7 +13,8 @@ public class CardGame
 		  String strSuit = "";
 		  
 		 //determines the rank of the card
-		  switch (rank) {
+		  switch (rank) 
+		  {
 		  case 0:
 		   strRank = "Ace";
 		   break;
@@ -32,7 +33,8 @@ public class CardGame
 		  }
 		 
 		  //determines the suit of the card
-		  switch (suit) {
+		  switch (suit) 
+		  {
 		  case 0:
 		   strSuit = "Clubs";
 		   break;
@@ -47,7 +49,7 @@ public class CardGame
 		   break;
 		  }
 		   //prints out the card
-		  System.out.print("The card you picked is the " + strRank +" of " + strSuit );
+		  System.out.print("The card you picked is the " + strRank + " of " + strSuit );
 		 }
 		 
 		}
