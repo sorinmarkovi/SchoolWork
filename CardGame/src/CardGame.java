@@ -6,7 +6,7 @@ public class CardGame
 		//generate random card
 		//display card
 		
-		 int card = (int) (Math.random() * 52.0); // picks a card from 0-51
+		  int card = (int) (Math.random() * 52.0); // picks a card from 0-51
 		  int rank = card / 4; // determine the rank of the card 0-12
 		  int suit = card % 4; // determine the suit of the card 0-3
 		  String strRank = "";
