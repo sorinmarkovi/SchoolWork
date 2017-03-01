@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Convert local variable &apos;RPS.gameMaker().userInput&apos; in &apos;RPS.gameMaker()&apos; to field&#x0D;&#x0A;- Original project: &apos;RPS&apos;&#x0D;&#x0A;- Original element: &apos;RPS.gameMaker().userInput&apos;&#x0D;&#x0A;- Field name: &apos;userInput&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;&#x0D;&#x0A;- Declare field &apos;static&apos;" description="Convert local variable &apos;userInput&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;{RPS.java" name="userInput" selection="920 34" stamp="1486691048033" static="true" version="1.0" visibility="2"/>
-</session>

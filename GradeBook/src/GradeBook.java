@@ -72,6 +72,7 @@ public class GradeBook
 	    average = (double)sum/data.length;
 	    System.out.println("Average value of array element is " + average);    
 	}
-	//TODO add a method to return a letter grade. 
+	// add a method to return a letter grade. 
+	//TODO Add a different method
 	
 }
