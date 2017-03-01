@@ -74,5 +74,4 @@ public class GradeBook
 	}
 	// add a method to return a letter grade. 
 	//TODO Add a different method
-	
 }

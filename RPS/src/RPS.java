@@ -6,9 +6,11 @@
  */
 import java.util.InputMismatchException;
 import java.util.Scanner;
-public class RPS {
+public class RPS 
+{
 private static Scanner userInput;
-public static void main(String[] args) {
+public static void main(String[] args) 
+{
 		startGame();
 }
 private static Object ComputerRPS(int Number) 
@@ -61,8 +63,10 @@ private static void gameMaker()
 	userInput = new Scanner(System.in);
 	Object rpsComputer = ComputerRPS(computer);
 	int guess;	
-do{
-	try {		
+do
+{
+	try 
+	{		
 		  System.out.print("scissor (1), rock (2), paper (3):");
 		  guess = userInput.nextInt();
 		  guess--;
@@ -120,13 +124,12 @@ private static void startGame()
 		gameMaker();
 		do
 			{
-			try {		
+			try 
+			{		
 				do
 				{
 				System.out.print("DO you to continue Y/N: ");
 			    answer = scan.nextLine();
-
-
 			    switch (answer)
 			    {
 			    case "Y":
@@ -143,7 +146,6 @@ private static void startGame()
 			    	falseI = false;
 			    	replay = 1;
 			            break;
-
 			    default :
 			             System.out.println("invalid choice");
 			             falseI = true;
@@ -162,7 +164,6 @@ private static void startGame()
 					falseI = true;
 					}
 					while(falseI);
-				
 				}
 			continueInput = false;
 			}
