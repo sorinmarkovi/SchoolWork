@@ -1,0 +1,15 @@
+/* 1. Gather requirements
+ * 2. Describe the application
+ * 3. Identify the main objects
+ * 4. Describe interactions
+ * 5. Create a class diagram
+ */
+public class UpperCase 
+{
+	public static void main(String[] args) 
+	{
+		// TODO (Count uppercase letters) Write a program that prompts the user to enter a string and displays the number of the uppercase letters in the string.
+
+	}
+
+}
