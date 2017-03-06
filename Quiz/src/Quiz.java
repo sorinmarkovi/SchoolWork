@@ -15,7 +15,8 @@ public class Quiz
 		// what the largest and the smallest numbers are.
 		numberSelector();
 	}
-	public static void numberSelector() {
+	public static void numberSelector() 
+	{
 		// declare
 		Scanner numberOfNums = new Scanner(System.in);
 		Scanner sc = new Scanner(System.in);
@@ -36,23 +37,18 @@ public class Quiz
 			}
 		} 
 		while (loopBol);
-
 		int integers[] = new int[x];
-
 		System.out.println("Please enter " + x + " number" + ((x > 1) ? "s" : " "));
 		addToArray(0,integers,x);	
-		
 		System.out.println("The minimum value is: " + getMinValue(integers));
 		System.out.println("The maximum value is: " + getMaxValue(integers));
 		//System.out.println("\n" + Arrays.sort(integers));
-		
 		Arrays.sort(integers);
 		System.out.println("The sorted int array is:");
 		for (int number : integers) 
 		{
 			System.out.print(" " + number + " ");
 		}
-		
 		sc.close();
 		numberOfNums.close();
 	}
@@ -63,7 +59,8 @@ public class Quiz
 
 		for (int x = 1; x < integers.length; x++) 
 		{
-			if (integers[x] < minValue) {
+			if (integers[x] < minValue) 
+			{
 				minValue = integers[x];
 			}
 		}

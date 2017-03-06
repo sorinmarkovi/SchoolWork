@@ -1,8 +1,8 @@
 import java.util.Scanner;
-public class AdditionGame {
-	public static void main(String[] args) {
-		
-		
+public class AdditionGame 
+{
+	public static void main(String[] args) 
+	{
 		//Generate two random numbers
 		//have the user try and add them
 		//if the user enters a letter, throw exceptions
@@ -18,26 +18,26 @@ public class AdditionGame {
 		int userSum;
 		
 		System.out.println("What is the sum?");
-		try{
-		userSum = info.nextInt();
-		
-		info.close();
-		
-		if (userSum == sumNum)
+		try
 		{
-			System.out.println("You got it!");
-		}
-		else
-		{
-			
-		while (userSum != sumNum)
-		{
-			System.out.println("Try again.");
 			userSum = info.nextInt();
-		}
-			System.out.println("You got it!");
 			
-		}	
+			info.close();
+			
+			if (userSum == sumNum)
+				{
+					System.out.println("You got it!");
+				}
+			else
+				{
+					
+				while (userSum != sumNum)
+					{
+						System.out.println("Try again.");
+						userSum = info.nextInt();
+					}
+					System.out.println("You got it!");
+				}	
 		}
 		catch(Exception e)
 		{
@@ -45,4 +45,3 @@ public class AdditionGame {
 		}
 	}
 }
-
