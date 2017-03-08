@@ -4,18 +4,17 @@
  * 4. Describe interactions
  * 5. Create a class diagram
  */
+import java.util.InputMismatchException;
 import java.util.Scanner;
-
-public class RPS {
+public class RPS 
+{
 	private static int gameUserWin;
 	private static int gameCompWin;
 	private static Scanner userInput;
-
 	public static void main(String[] args) 
 	{
 		startGame();
 	}
-
 	private static Object ComputerRPS(int Number) 
 	{
 		int computer = Number;
@@ -37,7 +36,6 @@ public class RPS {
 		}
 		return rpsComputer;
 	}
-
 	private static Object UserGuess(int guess) 
 	{
 		String rpsGuess = "";
@@ -58,7 +56,6 @@ public class RPS {
 		}
 		return rpsGuess;
 	}
-
 	private static void gameMaker() 
 	{
 		// declare variables
@@ -116,23 +113,90 @@ public class RPS {
 		} 
 		while (continueInput == true);
 	}
-
 	private static void startGame() 
 	{
-		gameMaker();
-		while ((gameUserWin == gameCompWin + 2) || (gameCompWin == gameUserWin + 2));
+		int replay = 0;
+		while (replay ==0)
 		{
-			if (gameUserWin == gameCompWin + 2) 
-			{
-				System.out.println("You win the game!");
-				System.exit(0);
-			}
-			if (gameCompWin == gameUserWin + 2) 
-			{
-				System.out.println("You lost the game!");
-				System.exit(0);
-			}
+			gameMaker();
+				if (gameUserWin == gameCompWin + 2) 
+				{
+					System.out.println("You win the game!");
+					//this will exit the program after it's finished. 
+					//System.exit(0);
+					gameUserWin = 0;
+					gameCompWin = 0;
+					replayGame();
+				}
+				if (gameCompWin == gameUserWin + 2) 
+				{
+					System.out.println("You lost the game!");
+					//System.exit(0);
+					gameUserWin = 0;
+					gameCompWin = 0;
+					replayGame();
+				}
 		}
-
+	}
+	private static void replayGame()
+	{
+		Scanner scan = new Scanner(System.in);
+		boolean continueInput = true;
+		boolean falseI = true;
+		int replay = 0;
+		String answer;
+		do
+		{
+			do
+				{
+				try 
+				{		
+					do
+					{
+					System.out.print("DO you to continue Y/N: ");
+				    answer = scan.nextLine();
+				    
+				    switch (answer)
+					    {
+					    case "Y":
+					    	falseI = false;
+					    	startGame();
+					    		break;
+					    case "y":
+					    	falseI = false;
+					    	startGame();
+					            break;
+					    case "N"://exit from program;
+					    	falseI = false;
+					    	replay = 1;
+					    		break;
+					    case "n":
+					    	falseI = false;
+					    	replay = 1;
+					            break;
+					    default :
+					             System.out.println("invalid choice");
+					             falseI = true;
+					             break;
+					   }
+					}
+					while(falseI);
+				}
+				catch (InputMismatchException e)
+					{
+						do
+						{
+						System.out.println("Try again. (" +  "Incorrect input: an integer is required)");          
+						replay = scan.nextInt(); 
+						falseI = true;
+						}
+						while(falseI);
+					}
+				continueInput = false;
+				}
+			while (continueInput == true);	
+		}
+		while (replay == 0);
+		scan.close();	
 	}
 }

@@ -11,8 +11,7 @@ public class Quiz
 {
 	public static void main(String[] args) 
 	{
-		// TODO Create a program that takes 4 numbers from the user and tells
-		// what the largest and the smallest numbers are.
+		// TODO Create a program that takes 4 numbers from the user and tells what the largest and the smallest numbers are.
 		numberSelector();
 	}
 	public static void numberSelector() 

@@ -10,9 +10,7 @@ public class UpperCase
 {
 	public static void main(String[] args) 
 	{
-		// TODO (Count uppercase letters) Write a program that prompts the user
-		// to enter a string and displays the number of the uppercase letters in
-		// the string.
+		// TODO (Count uppercase letters) Write a program that prompts the user to enter a string and displays the number of the uppercase letters in the string.
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter a string:");
 		String s = input.nextLine(); 	//get a string from the user

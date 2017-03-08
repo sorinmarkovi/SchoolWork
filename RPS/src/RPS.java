@@ -170,5 +170,6 @@ public class RPS
 		}
 		while (replay == 0);
 		scan.close();	
+		
 	}
 }
