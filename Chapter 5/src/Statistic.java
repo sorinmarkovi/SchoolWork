@@ -23,6 +23,10 @@ public class Statistic
 		// Write a program that prompts the user to enter ten numbers, and
 		// displays the
 		// mean and standard deviations of these numbers.
+		mathPart();
+	}
+	public static void mathPart()
+	{
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter ten numbers:");
 		// Enter amount
