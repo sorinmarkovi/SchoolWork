@@ -1,41 +1,47 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
-public class Plinko {
+public class Plinko 
+{
 	public static void main(String[] args) {
+		
 		// TODO Make a bean machine game
 		startPoint();
 	}
-
-	public static void startPoint() {
+	public static void startPoint() 
+	{
 		Scanner input = new Scanner(System.in);
 		int numberOfBalls;
 		int numberOfSlots;
-		try {
+		try 
+		{
 			System.out.print("Enter the number of balls to drop: ");
 			numberOfBalls = input.nextInt();
-		} catch (Exception e) {
+		} 
+		catch (Exception e) 
+		{
 			System.out.println("Try again. (" + "Incorrect input: an integer is required)");
 			numberOfBalls = input.nextInt();
 		}
-		try {
+		try 
+		{
 			System.out.print("Enter the number of slots in the bean machine: ");
 			numberOfSlots = input.nextInt();
-		} catch (Exception e) {
+		} 
+		catch (Exception e) 
+		{
 			System.out.println("Try again. (" + "Incorrect input: an integer is required)");
 			numberOfSlots = input.nextInt();
 		}
-
 		gameMaker(numberOfBalls, numberOfSlots);
+		replayGame();
 		input.close();
 	}
-
-	public static void gameMaker(int numberOfBalls, int numberOfSlots) {
+	public static void gameMaker(int numberOfBalls, int numberOfSlots) 
+	{
 		int[] slots = new int[numberOfSlots + 1];
 		rotationFinder(numberOfBalls, numberOfSlots, slots);
 		ballVisualizer(numberOfBalls, numberOfSlots, slots);
 	}
-
 	public static void rotationFinder(int numberOfBalls, int numberOfSlots, int[] slots) 
 	{
 		String rotation;
@@ -74,7 +80,6 @@ public class Plinko {
 			System.out.println();
 		}
 	}
-
 	public static void replayGame() 
 	{
 		Scanner scan = new Scanner(System.in);
@@ -92,7 +97,6 @@ public class Plinko {
 					{
 						System.out.print("DO you to continue Y/N: ");
 						answer = scan.nextLine();
-
 						switch (answer) 
 						{
 						case "Y":
@@ -104,10 +108,12 @@ public class Plinko {
 							falseI = false;
 							break;
 						case "N":
+							System.exit(0);
 							falseI = false;
 							replay = 1;
 							break;
 						case "n":// exit from program;
+							System.exit(0);
 							falseI = false;
 							replay = 1;
 							break;
