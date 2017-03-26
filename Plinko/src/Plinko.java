@@ -12,28 +12,34 @@ public class Plinko {
 		int numberOfBalls;
 		int numberOfSlots;
 		try {
-			System.out.print("Enter the number of balls to drop: ");
+			System.out.println("Enter the number of balls to drop: ");
 			numberOfBalls = input.nextInt();
-		} catch (Exception e) {
+		} 
+		catch (Exception e) 
+		{
 			System.out.println("Try again. (" + "Incorrect input: an integer is required)");
+			System.out.println("Enter the number of balls to drop: ");
 			numberOfBalls = input.nextInt();
 		}
-		try {
-			System.out.print("Enter the number of slots in the bean machine: ");
+		try 
+		{
+			System.out.println("Enter the number of slots in the bean machine: ");
 			numberOfSlots = input.nextInt();
-		} catch (Exception e) {
+		} 
+		catch (Exception e) {
 			System.out.println("Try again. (" + "Incorrect input: an integer is required)");
+			System.out.println("Enter the number of slots in the bean machine: ");
 			numberOfSlots = input.nextInt();
 		}
 
 		gameMaker(numberOfBalls, numberOfSlots);
 		input.close();
 	}
-
 	public static void gameMaker(int numberOfBalls, int numberOfSlots) {
 		int[] slots = new int[numberOfSlots + 1];
 		rotationFinder(numberOfBalls, numberOfSlots, slots);
 		ballVisualizer(numberOfBalls, numberOfSlots, slots);
+		replayGame();
 	}
 
 	public static void rotationFinder(int numberOfBalls, int numberOfSlots, int[] slots) 
