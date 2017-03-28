@@ -2,38 +2,17 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Plinko 
 {
-	public static void main(String[] args) {
-		
-		// TODO Make a bean machine game
+	static Scanner input = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		//Make a plinko game
 		startPoint();
 	}
 	public static void startPoint() 
 	{
-		Scanner input = new Scanner(System.in);
-		int numberOfBalls;
-		int numberOfSlots;
-		try 
-		{
-			System.out.print("Enter the number of balls to drop: ");
-			numberOfBalls = input.nextInt();
-		} 
-		catch (Exception e) 
-		{
-			System.out.println("Try again. (" + "Incorrect input: an integer is required)");
-			numberOfBalls = input.nextInt();
-		}
-		try 
-		{
-			System.out.print("Enter the number of slots in the bean machine: ");
-			numberOfSlots = input.nextInt();
-		} 
-		catch (Exception e) 
-		{
-			System.out.println("Try again. (" + "Incorrect input: an integer is required)");
-			numberOfSlots = input.nextInt();
-		}
+		int numberOfBalls = numberOfBalls();
+		int numberOfSlots = numberOfSlots();
 		gameMaker(numberOfBalls, numberOfSlots);
-		replayGame();
 		input.close();
 	}
 	public static void gameMaker(int numberOfBalls, int numberOfSlots) 
@@ -41,6 +20,7 @@ public class Plinko
 		int[] slots = new int[numberOfSlots + 1];
 		rotationFinder(numberOfBalls, numberOfSlots, slots);
 		ballVisualizer(numberOfBalls, numberOfSlots, slots);
+		replayGame();
 	}
 	public static void rotationFinder(int numberOfBalls, int numberOfSlots, int[] slots) 
 	{
@@ -71,14 +51,24 @@ public class Plinko
 			{
 				if (i == slots[j]) 
 				{
-					ball[j] = "O";
+					ball[j] = "0";
 					slots[j]--;
-				} else
+				} 
+				else
 					ball[j] = " ";
 				System.out.print(ball[j]);
 			}
 			System.out.println();
 		}
+		binVisualizer(numberOfSlots);
+	}
+	public static void binVisualizer(int numberOfSlots)
+	{
+		for (int i = 1; i <= numberOfSlots ; i++) 
+		{
+			System.out.print(i);	
+		}
+		System.out.println("");
 	}
 	public static void replayGame() 
 	{
@@ -97,6 +87,7 @@ public class Plinko
 					{
 						System.out.print("DO you to continue Y/N: ");
 						answer = scan.nextLine();
+
 						switch (answer) 
 						{
 						case "Y":
@@ -108,12 +99,10 @@ public class Plinko
 							falseI = false;
 							break;
 						case "N":
-							System.exit(0);
 							falseI = false;
 							replay = 1;
 							break;
 						case "n":// exit from program;
-							System.exit(0);
 							falseI = false;
 							replay = 1;
 							break;
@@ -140,5 +129,50 @@ public class Plinko
 		} 
 		while (replay == 0);
 		scan.close();
+	}
+	public static int numberOfBalls()
+	{
+		
+		int numberOfBalls = 0;
+		boolean continueInput = true;
+		do
+		{
+			try 
+			{		
+				System.out.println("Enter the number of balls to drop: ");
+				numberOfBalls = input.nextInt();
+				continueInput = false;
+			}
+				
+			catch (InputMismatchException e)
+				{
+					System.out.println("Try again. (" +  "Incorrect input: an integer is required)");          
+					input.nextLine(); 
+				}
+		}
+		while (continueInput == true);
+		return numberOfBalls;
+	}
+	public static int numberOfSlots()
+	{
+		int numberOfSlots = 0;
+		boolean continueInput = true;
+		do
+		{
+			try 
+			{		
+				System.out.println("Enter the number of slots in the bean machine: ");
+				numberOfSlots = input.nextInt();
+				continueInput = false;
+			}
+				
+			catch (InputMismatchException e)
+				{
+					System.out.println("Try again. (" +  "Incorrect input: an integer is required)");          
+					input.nextLine(); 
+				}
+		}
+		while (continueInput == true);
+		return numberOfSlots;
 	}
 }
