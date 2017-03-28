@@ -34,4 +34,8 @@
 >>>>>>> c63039a4506de1ac1c933b2519c91adf33216870
 2017-03-20 09:25:54,819 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2017-03-22 09:13:31,177 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+<<<<<<< HEAD
 2017-03-22 11:13:47,590 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+=======
+2017-03-24 09:23:35,750 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+>>>>>>> 9a299aceeb2010c2f9de4a05dea67c697b08d06e
