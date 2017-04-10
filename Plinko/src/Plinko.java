@@ -64,7 +64,7 @@ public class Plinko
 	}
 	public static void binVisualizer(int numberOfSlots)
 	{
-		for (int i = 1; i <= numberOfSlots ; i++) 
+		for (int i = 1; i != numberOfSlots + 1 ; i++) 
 		{
 			System.out.print(i);	
 		}
@@ -100,9 +100,11 @@ public class Plinko
 							break;
 						case "N":
 							falseI = false;
+							System.exit(0);
 							replay = 1;
 							break;
 						case "n":// exit from program;
+							System.exit(0);
 							falseI = false;
 							replay = 1;
 							break;
@@ -176,3 +178,4 @@ public class Plinko
 		return numberOfSlots;
 	}
 }
+//2147483647
