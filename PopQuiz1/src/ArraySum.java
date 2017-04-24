@@ -1,26 +1,30 @@
 import java.util.stream.IntStream;
 public class ArraySum 
 {
+	static int [] a = new int[11];
 	public static void main(String[] args) 
 	{
 		// TODO sum 1 - 10
-		mainSum();
-		loopSum();
+		fillArray();
 	}
-	public static void mainSum ()
+	public static void fillArray()
 	{
-		int[] a = {1,2,3,4,5,6,7,8,9,10};
-		int sum = IntStream.of(a).sum();
-		System.out.println("The sum is " + sum);
-	}
-	public static void loopSum()
-	{
-		int [] a = new int[11];
 		for (int x = 0; x < 11; x++)
 		{
 			a[x] = x;
 		}
-		int sum = IntStream.of(a).sum();
-		System.out.println("The sum is " + sum);
+		sumArray(a);
 	}
+	public static void sumArray(int a[])
+	{
+		int sum = IntStream.of(a).sum();
+		printSum(sum);
+	}
+	public static void printSum(int sum)
+	{
+		System.out.println("The sum is " + sum);
+		
+	}
+	
+	
 }
