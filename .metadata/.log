@@ -2349,3 +2349,16 @@ Caused by: com.google.gson.stream.MalformedJsonException: Expected ':' at line 3
 
 !ENTRY org.eclipse.equinox.p2.touchpoint.natives 2 0 2017-04-25 10:17:17.630
 !MESSAGE Could not remove temporary backup directory (it is safe to manually delete it and its contents): C:\Users\mcdan\AppData\Local\Temp\C__New folder_eclipse_2b74b604cd60_a9fea83fc4de
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-04-25 22:28:17.049
+!MESSAGE An internal error occurred during: "LabelEventJob".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1262)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:710)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.fireLabelEvent(GitLightweightDecorator.java:727)
+	at org.eclipse.egit.ui.internal.decorators.LabelEventJob.run(GitLightweightDecorator.java:797)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
