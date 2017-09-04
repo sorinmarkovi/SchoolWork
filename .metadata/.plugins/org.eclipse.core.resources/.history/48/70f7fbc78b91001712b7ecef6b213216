@@ -1,0 +1,23 @@
+public class HW1Review 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Use a print statement to sum 1/1 - 1/6 and 1/6 - 1/1. 
+		System.out.println("Hello, World");
+			//TODO explain what you find
+		
+		// TODO Use integers to sum 1/1 - 1/6 and 1/6 - 1/1. 
+		
+			// TODO explain what you find
+		
+		// TODO Use doubles to sum 1/1 - 1/6 and 1/6 - 1/1. 
+		
+			// TODO explain what you find
+		
+		// TODO Demonstrate the use of a scanner to read in a double.
+
+		// TODO Demonstrate the use of an if statement
+		
+		
+	}
+}
