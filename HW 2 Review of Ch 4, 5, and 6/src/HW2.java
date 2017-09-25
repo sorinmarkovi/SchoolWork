@@ -10,6 +10,7 @@ public class HW2
 	}
 	public static void geometry()
 	{
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		//area of a hexagon, Area = (6 * s^2)/ (4 * tan(pi/6))\
 		// Write a program that prompts the user to enter the side of a hexagon and displays

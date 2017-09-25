@@ -1,0 +1,20 @@
+public class Homework3 
+{
+	 public static void main(String[] args) {
+
+	        Stock mainStock = new Stock("ORCL", "Oracle Corporation");
+	        mainStock.setCurrentPrice(34.5);
+	        mainStock.setCurrentPrice(34.35);
+	        System.out.println("Stock name: " + mainStock.getName() + " Symbol: " + mainStock.getSymbol());
+	        System.out.println("previous price: " + mainStock.getPreviousClosingPrice());
+	        System.out.println("current price: " + mainStock.getCurrentPrice());
+	        System.out.println("Percent changed: " + mainStock.getChangePercent());
+
+	    }
+
+
+
+
+
+
+	}
